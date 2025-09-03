@@ -1,87 +1,108 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2865
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Playlist Al-Quran</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f0f8ff;
+    }
+    h1 {
+      color: #2da5dd;
+    }
+    #playlist li {
+      cursor: pointer;
+      margin: 5px 0;
+      padding: 5px 10px;
+      list-style: none;
+      border: 1px solid #2da5dd;
+      border-radius: 5px;
+      background-color: #e6f2fb;
+    }
+    #playlist li:hover {
+      background-color: #cce6f9;
+    }
+    #playlist li.active {
+      background-color: #2da5dd;
+      color: white;
+    }
+  </style>
+</head>
+<body>
 
-\f0\fs24 \cf0 <!DOCTYPE html>\
-<html lang="id">\
-<head>\
-  <meta charset="UTF-8">\
-  <title>Playlist Quran</title>\
-  <style>\
-    body \{\
-      font-family: Arial, sans-serif;\
-      background: #f3f3f3;\
-      padding: 20px;\
-    \}\
-    h2 \{ color: #2c3e50; \}\
-    ul \{ list-style: none; padding: 0; \}\
-    li \{\
-      padding: 8px;\
-      margin: 4px 0;\
-      background: #fff;\
-      border: 1px solid #ddd;\
-      cursor: pointer;\
-    \}\
-    li.active \{\
-      background: #3498db;\
-      color: white;\
-      font-weight: bold;\
-    \}\
-  </style>\
-</head>\
-<body>\
-  <h2>Playlist Quran (Ayat 1\'9610)</h2>\
-  <audio id="audioPlayer" controls></audio>\
-  \
-  <ul id="playlist">\
-    <li data-src="audio/ayat1.mp3">Ayat 1</li>\
-    <li data-src="audio/ayat2.mp3">Ayat 2</li>\
-    <li data-src="audio/ayat3.mp3">Ayat 3</li>\
-    <li data-src="audio/ayat4.mp3">Ayat 4</li>\
-    <li data-src="audio/ayat5.mp3">Ayat 5</li>\
-    <li data-src="audio/ayat6.mp3">Ayat 6</li>\
-    <li data-src="audio/ayat7.mp3">Ayat 7</li>\
-    <li data-src="audio/ayat8.mp3">Ayat 8</li>\
-    <li data-src="audio/ayat9.mp3">Ayat 9</li>\
-    <li data-src="audio/ayat10.mp3">Ayat 10</li>\
-  </ul>\
-\
-  <script>\
-    const audio = document.getElementById("audioPlayer");\
-    const playlist = document.getElementById("playlist");\
-    const tracks = playlist.getElementsByTagName("li");\
-    let currentTrack = 0;\
-\
-    function loadTrack(index) \{\
-      for (let i = 0; i < tracks.length; i++) \{\
-        tracks[i].classList.remove("active");\
-      \}\
-      currentTrack = index;\
-      audio.src = tracks[index].getAttribute("data-src");\
-      tracks[index].classList.add("active");\
-      audio.play();\
-    \}\
-\
-    // klik manual\
-    for (let i = 0; i < tracks.length; i++) \{\
-      tracks[i].addEventListener("click", function() \{\
-        loadTrack(i);\
-      \});\
-    \}\
-\
-    // auto next\
-    audio.addEventListener("ended", function() \{\
-      if (currentTrack < tracks.length - 1) \{\
-        loadTrack(currentTrack + 1);\
-      \}\
-    \});\
-\
-    // mulai otomatis dari track pertama\
-    loadTrack(0);\
-  </script>\
-</body>\
-</html>\
-}
+<h1>Playlist Surah Al-Baqarah</h1>
+
+<audio id="player" controls style="width:100%; margin-bottom:20px;"></audio>
+
+<ul id="playlist">
+  <li data-src="https://raw.githubusercontent.com/novalprasetiyo14/Playlist-Al-Quran/main/115%20Al-Baqarah%20ayat%20106.mp3">Ayat 106</li>
+  <li data-src="https://raw.githubusercontent.com/novalprasetiyo14/Playlist-Al-Quran/main/116%20Al-Baqarah%20ayat%20107.mp3">Ayat 107</li>
+  <li data-src="https://raw.githubusercontent.com/novalprasetiyo14/Playlist-Al-Quran/main/117%20Al-Baqarah%20ayat%20108.mp3">Ayat 108</li>
+  <li data-src="https://raw.githubusercontent.com/novalprasetiyo14/Playlist-Al-Quran/main/118%20Al-Baqarah%20ayat%20109.mp3">Ayat 109</li>
+  <li data-src="https://raw.githubusercontent.com/novalprasetiyo14/Playlist-Al-Quran/main/119%20Al-Baqarah%20ayat%20110.mp3">Ayat 110</li>
+  <li data-src="https://raw.githubusercontent.com/novalprasetiyo14/Playlist-Al-Quran/main/120%20Al-Baqarah%20ayat%20111.mp3">Ayat 111</li>
+  <li data-src="https://raw.githubusercontent.com/novalprasetiyo14/Playlist-Al-Quran/main/121%20Al-Baqarah%20ayat%20112.mp3">Ayat 112</li>
+  <li data-src="https://raw.githubusercontent.com/novalprasetiyo14/Playlist-Al-Quran/main/122%20Al-Baqarah%20ayat%20113.mp3">Ayat 113</li>
+  <li data-src="https://raw.githubusercontent.com/novalprasetiyo14/Playlist-Al-Quran/main/123%20Al-Baqarah%20ayat%20114.mp3">Ayat 114</li>
+  <li data-src="https://raw.githubusercontent.com/novalprasetiyo14/Playlist-Al-Quran/main/124%20Al-Baqarah%20ayat%20115.mp3">Ayat 115</li>
+  <li data-src="https://raw.githubusercontent.com/novalprasetiyo14/Playlist-Al-Quran/main/125%20Al-Baqarah%20ayat%20116.mp3">Ayat 116</li>
+  <li data-src="https://raw.githubusercontent.com/novalprasetiyo14/Playlist-Al-Quran/main/126%20Al-Baqarah%20ayat%20117.mp3">Ayat 117</li>
+  <li data-src="https://raw.githubusercontent.com/novalprasetiyo14/Playlist-Al-Quran/main/127%20Al-Baqarah%20ayat%20118.mp3">Ayat 118</li>
+  <li data-src="https://raw.githubusercontent.com/novalprasetiyo14/Playlist-Al-Quran/main/128%20Al-Baqarah%20ayat%20119.mp3">Ayat 119</li>
+  <li data-src="https://raw.githubusercontent.com/novalprasetiyo14/Playlist-Al-Quran/main/129%20Al-Baqarah%20ayat%20120.mp3">Ayat 120</li>
+  <li data-src="https://raw.githubusercontent.com/novalprasetiyo14/Playlist-Al-Quran/main/130%20Al-Baqarah%20ayat%20121.mp3">Ayat 121</li>
+  <li data-src="https://raw.githubusercontent.com/novalprasetiyo14/Playlist-Al-Quran/main/131%20Al-Baqarah%20ayat%20122.mp3">Ayat 122</li>
+  <li data-src="https://raw.githubusercontent.com/novalprasetiyo14/Playlist-Al-Quran/main/132%20Al-Baqarah%20ayat%20123.mp3">Ayat 123</li>
+  <li data-src="https://raw.githubusercontent.com/novalprasetiyo14/Playlist-Al-Quran/main/133%20Al-Baqarah%20ayat%20124.mp3">Ayat 124</li>
+  <li data-src="https://raw.githubusercontent.com/novalprasetiyo14/Playlist-Al-Quran/main/134%20Al-Baqarah%20ayat%20125.mp3">Ayat 125</li>
+  <li data-src="https://raw.githubusercontent.com/novalprasetiyo14/Playlist-Al-Quran/main/135%20Al-Baqarah%20ayat%20126.mp3">Ayat 126</li>
+  <li data-src="https://raw.githubusercontent.com/novalprasetiyo14/Playlist-Al-Quran/main/136%20Al-Baqarah%20ayat%20127.mp3">Ayat 127</li>
+  <li data-src="https://raw.githubusercontent.com/novalprasetiyo14/Playlist-Al-Quran/main/137%20Al-Baqarah%20ayat%20128.mp3">Ayat 128</li>
+  <li data-src="https://raw.githubusercontent.com/novalprasetiyo14/Playlist-Al-Quran/main/138%20Al-Baqarah%20ayat%20129.mp3">Ayat 129</li>
+  <li data-src="https://raw.githubusercontent.com/novalprasetiyo14/Playlist-Al-Quran/main/139%20Al-Baqarah%20ayat%20130.mp3">Ayat 130</li>
+  <li data-src="https://raw.githubusercontent.com/novalprasetiyo14/Playlist-Al-Quran/main/140%20Al-Baqarah%20ayat%20131.mp3">Ayat 131</li>
+  <li data-src="https://raw.githubusercontent.com/novalprasetiyo14/Playlist-Al-Quran/main/141%20Al-Baqarah%20ayat%20132.mp3">Ayat 132</li>
+  <li data-src="https://raw.githubusercontent.com/novalprasetiyo14/Playlist-Al-Quran/main/142%20Al-Baqarah%20ayat%20133.mp3">Ayat 133</li>
+  <li data-src="https://raw.githubusercontent.com/novalprasetiyo14/Playlist-Al-Quran/main/143%20Al-Baqarah%20ayat%20134.mp3">Ayat 134</li>
+  <li data-src="https://raw.githubusercontent.com/novalprasetiyo14/Playlist-Al-Quran/main/144%20Al-Baqarah%20ayat%20135.mp3">Ayat 135</li>
+  <li data-src="https://raw.githubusercontent.com/novalprasetiyo14/Playlist-Al-Quran/main/145%20Al-Baqarah%20ayat%20136.mp3">Ayat 136</li>
+  <li data-src="https://raw.githubusercontent.com/novalprasetiyo14/Playlist-Al-Quran/main/146%20Al-Baqarah%20ayat%20137.mp3">Ayat 137</li>
+  <li data-src="https://raw.githubusercontent.com/novalprasetiyo14/Playlist-Al-Quran/main/147%20Al-Baqarah%20ayat%20138.mp3">Ayat 138</li>
+  <li data-src="https://raw.githubusercontent.com/novalprasetiyo14/Playlist-Al-Quran/main/148%20Al-Baqarah%20ayat%20139.mp3">Ayat 139</li>
+  <li data-src="https://raw.githubusercontent.com/novalprasetiyo14/Playlist-Al-Quran/main/149%20Al-Baqarah%20ayat%20140.mp3">Ayat 140</li>
+  <li data-src="https://raw.githubusercontent.com/novalprasetiyo14/Playlist-Al-Quran/main/150%20Al-Baqarah%20ayat%20141.mp3">Ayat 141</li>
+</ul>
+
+<script>
+  const player = document.getElementById('player');
+  const items = document.querySelectorAll('#playlist li');
+  let current = 0;
+
+  function playTrack(index) {
+    items.forEach(i => i.classList.remove('active'));
+    const item = items[index];
+    item.classList.add('active');
+    player.src = item.getAttribute('data-src');
+    player.play();
+    current = index;
+  }
+
+  items.forEach((item, index) => {
+    item.addEventListener('click', () => playTrack(index));
+  });
+
+  player.addEventListener('ended', () => {
+    current++;
+    if (current < items.length) {
+      playTrack(current);
+    }
+  });
+
+  // Play track pertama otomatis
+  playTrack(0);
+</script>
+
+</body>
+</html>
